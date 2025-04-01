@@ -1,0 +1,66 @@
+/* src/index.css */
+@import "../node_modules/tailwindcss/index.css";
+@import "flatpickr/dist/flatpickr.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  font-family: 'Inter', 'SF Pro Display', system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #F7F7F7;
+}
+
+/* Flatpickr Anpassung (unverändert) */
+.flatpickr-calendar {
+  @apply bg-white text-gray-900 rounded-lg shadow-md border border-gray-200;
+}
+
+.flatpickr-day.selected {
+  @apply bg-gray-700 border-gray-700 text-white;
+}
+
+.flatpickr-day:hover {
+  @apply bg-gray-100;
+}
+
+.flatpickr-day.today {
+  @apply border-blue-500;
+}
+
+.flatpickr-day:focus, .flatpickr-day.selected:focus {
+  @apply ring-2 ring-blue-500;
+}
+
+/* Vercel-inspirierte Button-Styles */
+.vercel-button {
+  @apply bg-gray-800 text-white font-medium py-2 px-4 rounded-lg transition-all duration-200;
+}
+
+.vercel-button:hover {
+  @apply bg-gray-700 shadow-lg;
+}
+
+.vercel-button:focus {
+  @apply outline-none ring-2 ring-gray-400/50;
+}
+
+/* Neuer Style für den aktiven Zustand (gleiches Farbschema wie Toggle) */
+.vercel-button-active {
+  @apply bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium py-2 px-4 rounded-lg transition-all duration-200;
+}
+
+.vercel-button-active:hover {
+  @apply shadow-lg;
+}
+
+.vercel-button-active:focus {
+  @apply outline-none ring-2 ring-blue-500/50;
+}
+
+/* Vercel-inspirierte Input-Styles */
+.vercel-input {
+  @apply w-full px-4 py-2 bg-white border border-gray-200 rounded-lg text-gray-900 text-base font-normal shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200;
+}
