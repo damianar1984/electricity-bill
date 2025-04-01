@@ -47,7 +47,7 @@ export function Auth() {
         provider: 'azure',
         options: {
           scopes: 'email profile openid offline_access',
-          redirectTo: 'http://localhost:5200/',
+          redirectTo: 'https://damianar1984.github.io/electricity-bill/',
           // prompt: 'login' wird vorerst entfernt, um den Basis-Flow zu testen
         },
       });
